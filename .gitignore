@@ -2,7 +2,7 @@
 /data/
 
 # Notebook caches
-notebooks/cache/
+notebooks/cache/*
 
 # Mac OS-specific storage files
 .DS_Store
