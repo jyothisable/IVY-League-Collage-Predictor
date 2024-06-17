@@ -104,7 +104,7 @@ Additional feature engineered columns:
 
 **Methods and Techniques used:** EDA, feature engineering, modeling using sklearn pipelines, hyperparameter tuning
 
-**Measure of Performance and Minimum Threshold to reach the business objective** : MSE of 5% or less
+**Measure of Performance and Minimum Threshold to reach the business objective** : MSE of 1% or less
 
 **Assumptions**
 1. This fairly small dataset (500 entries) is representative of the real world population.
@@ -124,5 +124,8 @@ Intercept: -0.39867413457616596
 | toefl_score       | 0.121719     |
 | lor               | 0.061737     |
 | university_rating | 0.040744     |
+
+
+Check EDA under `/notebooks` for more details.
 --------
 
