@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-Linear Regresssion model to predict the chance of admission to IVY league college
+Linear Regression model to predict the chance of admission to IVY league college
 
 ## Project Organization
 
@@ -58,16 +58,14 @@ Linear Regresssion model to predict the chance of admission to IVY league colleg
         └── visualize.py
 ```
 
-## Intro to the Dataset and the Aim
-\<img src="/jamboree_logo.png" alt="jamboree logo banner" style="width: 800px;"/>
+# Intro to the Dataset and the Aim
+<img src="/banner.jpg" alt="jamboree logo banner" style="width: 800px;"/>
 
-Jamboree has helped thousands of students like you make it to top colleges abroad. Be it GMAT, GRE or SAT, their unique problem-solving methods ensure maximum scores with minimum effort.
-
-Jamboree team wants to know what factors are important for a students success in getting into an IVY league college. They also want to see if we can make a predictive model to predict the chance of admission to IVY league college using the given features.
+An education institute has recently launched a dataset that contains the details of students who have applied for admission to IVY League College. The Jamboree team wants to know what factors are important for a student's success in getting into an IVY league college. They also want to see if we can make a predictive model to predict the chance of admission to IVY league college using the given features.
 
 **Dataset**
 
-This dataset contains the details of 500 students who have applied for admission to IVY league college along with their success rate.
+This dataset contains the details of 500 students who have applied for admission to IVY League College along with their success rate.
 
 Summary of sanitized data:
 
@@ -99,33 +97,36 @@ Additional feature engineered columns:
 
 
 **Aim:** 
-1. To anlyze what factors are important for a students success in getting into an IVY league college.
-2. To make a predictive model to predict the chance of admission (`chance_of_admit`) to IVY league college using the given features.
+1. To analyze what factors are important for a student's success in getting into an IVY league college.
+2. To make a predictive interpretable model to predict the chance of admission (`chance_of_admit`) to IVY league college using the given features.
 
 **Methods and Techniques used:** EDA, feature engineering, modeling using sklearn pipelines, hyperparameter tuning
 
-**Measure of Performance and Minimum Threshold to reach the business objective** : MSE of 1% or less
+**Measure of Performance and Minimum Threshold to reach the business objective**: MSE of 1% or less with max VIF less than 5
 
 **Assumptions**
-1. This fairly small dataset (500 entries) is representative of the real world population.
-2. The data is stable and does not change over time. Thus model assumed to not decay. 
-
+1. This fairly small dataset (500 entries) is representative of the real-world population.
+2. The data is stable and does not change over time. Thus model is assumed to not decay. 
 
 # Results
-* The best model is Linear Regression with **MSE of 0.330%** and **R2 of 0.828**
+* The best model is Linear Regression with 
+    * MSE: **`0.3421%`**
+    * Accuracy(R^2) **`82.282%`**
+    * VIF: **`4.26`**
 * The following features with weights are selected by the model which signifies the importance of those features
-Intercept: -0.39867413457616596
+Intercept: -0.25633387548676145
 
-| Features          | Coefficients |
-|-------------------|--------------|
-| cgpa              | 0.505760     |
-| gre_score         | 0.192355     |
-| research          | 0.160473     |
-| toefl_score       | 0.121719     |
-| lor               | 0.061737     |
-| university_rating | 0.040744     |
+| Features            | Coefficients |
+|---------------------|--------------|
+| `cgpa`              | 0.599586     |
+| `research`          | 0.205412     |
+| `gre_score`         | 0.122329     |
+| `toefl_score`       | 0.097854     |
+| `university_rating` | 0.068220     |
+
+*  CGPA has the most weight for predicting the chance of admit to IVY league college followed by research and GRE score
 
 
-Check EDA under `/notebooks` for more details.
+Check EDA under `/notebooks` for more details or see the Kaggle Notebook [here](https://www.kaggle.com/code/athuljyothis/jamboree-admission-linear-regression/notebook)
 --------
 
