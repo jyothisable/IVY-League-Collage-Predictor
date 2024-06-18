@@ -127,6 +127,6 @@ Intercept: -0.25633387548676145
 *  CGPA has the most weight for predicting the chance of admit to IVY league college followed by research and GRE score
 
 
-Check EDA under `/notebooks` for more details or see the Kaggle Notebook [here](https://www.kaggle.com/code/athuljyothis/jamboree-admission-linear-regression/notebook)
+Check EDA under `/notebooks` for more details or see the Kaggle Notebook [here](https://www.kaggle.com/code/athuljyothis/ivy-league-collage-predictor-ml-model-82-acc)
 --------
 
