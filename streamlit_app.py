@@ -54,6 +54,6 @@ if st.button("Submit",use_container_width=10):
     chance_of_admit = lr_model.predict(input_data)[0]
     
     
-    chance_of_admit = max(1,chance_of_admit) # limit the chance of admission to 1
+    chance_of_admit = min(1,chance_of_admit) # limit the chance of admission to 1
     st.header(f'Chance of Admission: {chance_of_admit*100:.2f}%')
     
