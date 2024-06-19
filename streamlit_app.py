@@ -49,7 +49,7 @@ if st.button("Submit",use_container_width=10):
 
     # Create a DataFrame with the input data
     input_data = pd.DataFrame([data])
-    st.write(input_data)
+    # st.write(input_data)
     
     chance_of_admit = lr_model.predict(input_data)[0]
     
