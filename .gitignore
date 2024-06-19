@@ -1,6 +1,8 @@
 # Data
 /data/
 
+.vscode
+
 # Notebook caches
 notebooks/cache/*
 
