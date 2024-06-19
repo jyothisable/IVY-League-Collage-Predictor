@@ -6,6 +6,8 @@
 
 Linear Regression model to predict the chance of admission to IVY league college
 
+## See LIVE demo [here](https://ivy-league-collage-predictor.streamlit.app/)
+
 ## Project Organization
 
 ```
