@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import joblib
 
-from build_features import * # import all functions in build_features.py
+# from build_features import * # import all functions in build_features.py
 # #column transformer
 
 lr_model = joblib.load('models/LR_model.joblib')
