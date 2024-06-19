@@ -4,17 +4,16 @@ import numpy as np
 import pandas as pd
 import joblib
 
-from src.build_features import * # import all functions in build_features.py
-#column transformer
+from build_features import * # import all functions in build_features.py
+# #column transformer
 
-
-lr_model = joblib.load('models/LR_model.joblib')
+lr_model = joblib.load('../models/LR_model.joblib')
 
 
 st.title('IVY League Collage Predictor :medal:')
 
 # Add a banner image
-st.image('notebooks/banner.jpg', use_column_width=True)
+st.image('banner.jpg', use_column_width=True)
 
 st.write("**Enter your details to predict the chance of admission to IVY league college**")
 
@@ -49,7 +48,7 @@ if st.button("Submit",use_container_width=10):
 
     # Create a DataFrame with the input data
     input_data = pd.DataFrame([data])
-    st.write(input_data)
+    # st.write(input_data)
     
     chance_of_admit = lr_model.predict(input_data)[0]
     
