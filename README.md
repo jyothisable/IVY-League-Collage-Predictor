@@ -35,7 +35,7 @@ Linear Regression model to predict the chance of admission to IVY league college
 ```
 
 # Intro to the Dataset and the Aim
-<img src="/notebooks//banner.jpg" alt="jamboree logo banner" style="width: 800px;"/>
+<img src="banner.jpg" alt="jamboree logo banner" style="width: 800px;"/>
 
 An education institute has recently launched a dataset that contains the details of students who have applied for admission to IVY League College. The Jamboree team wants to know what factors are important for a student's success in getting into an IVY league college. They also want to see if we can make a predictive model to predict the chance of admission to IVY league college using the given features.
 
