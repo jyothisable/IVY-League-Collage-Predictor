@@ -22,7 +22,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     # Define the input fields
-    cgpa = st.number_input("CGPA", min_value=1.0, max_value=10.0, step=0.1, value=8.0)
+    cgpa = st.number_input("CGPA", min_value=5.0, max_value=10.0, step=0.1, value=8.0)
     gre_score = st.number_input("GRE Score", min_value=250, max_value=340, step=1, value=300)
     toefl_score = st.number_input("TOEFL Score", min_value=50, max_value=120, step=1, value=105)
     
@@ -52,7 +52,9 @@ if st.button("Submit",use_container_width=10):
     
     chance_of_admit = lr_model.predict(input_data)[0]
     
-    
+    if chance_of_admit < 0:
+        chance_of_admit = 0
+        
     chance_of_admit = min(1,chance_of_admit) # limit the chance of admission to 1
     st.header(f'Chance of Admission: {chance_of_admit*100:.2f}%')
     
