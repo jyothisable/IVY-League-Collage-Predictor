@@ -10,7 +10,7 @@ import joblib
 lr_model = joblib.load('models/LR_model.joblib')
 
 
-st.title('IVY League Collage Predictor :medal:')
+st.title('IVY League College Predictor :medal:')
 
 # Add a banner image
 st.image('banner.jpg', use_column_width=True)
@@ -27,8 +27,8 @@ with col1:
     toefl_score = st.number_input("TOEFL Score", min_value=50, max_value=120, step=1, value=105)
     
 with col2:
-    university_rating = st.selectbox('University Rating', options=[1, 2, 3, 4, 5])
-    research = st.checkbox("Research Experience")
+    university_rating = st.selectbox('Select rating of university you want to apply', options=['1 (Best)','2 (Better)','3 (Good)','4 (Above Average)','5 (Average)'])
+    research = st.toggle("Do you have Research Experience ?")
 
 
 
@@ -41,7 +41,7 @@ if st.button("Submit",use_container_width=10):
         "cgpa": cgpa,
         "sop":3.0,
         "lor":3.0,
-        "university_rating": university_rating,
+        "university_rating": int(university_rating.split(' ')[0]),
         "research": int(research)  # Convert boolean to integer
     }
     
